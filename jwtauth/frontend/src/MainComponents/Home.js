@@ -4,8 +4,8 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <p>Welcome to Webspot 2.0. </p>
-                <p>A custom CMS made with React, MongoDB, Express JS, and Node.js.</p>
+                <p>This is the Homepage </p>
+                <p>This is the P - tag that I want to manipulate.</p>
             </div>
         );
     }

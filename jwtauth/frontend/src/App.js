@@ -6,10 +6,8 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from './setAuthToken';
 import { setCurrentUser, logoutUser } from './actions/authentication';
 
-import Navbar from './components/Navbar';
-import Register from './components/Register';
-import Login from './components/Login';
-import Home from './components/Home';
+import MainComponent from './MainComponents/MainComponent';
+import WebspotMain from './WebspotComponents/WebspotMain';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -31,12 +29,10 @@ class App extends Component {
       <Provider store = { store }>
         <Router>
             <div>
-              <Navbar />
-                <Route exact path="/" component={ Home } />
-                <div className="container">
-                  <Route exact path="/register" component={ Register } />
-                  <Route exact path="/login" component={ Login } />
-                </div>
+              <Route exact path="/" component={ MainComponent } />
+              <Route path="/webspot" component={ WebspotMain }/>
+              {/*<Route exact path="/webspot/register" component={ Register } />*/}
+              {/*<Route exact path="/webspot/login" component={ Login } />*/}
             </div>
           </Router>
         </Provider>
