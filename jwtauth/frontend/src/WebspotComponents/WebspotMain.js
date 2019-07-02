@@ -6,6 +6,7 @@ import Dashboard from './Dashboard';
 import Register from "./Register";
 import Login from "./Login";
 
+
 export default class WebspotMain extends Component {
     render() {
         return (
