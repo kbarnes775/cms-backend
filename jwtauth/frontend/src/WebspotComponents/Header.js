@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 
 class Header extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            email: '',
-            password: '',
-            errors: {}
+            navbars: {},
+            isSticky: false
         }
     }
 
@@ -14,10 +14,24 @@ class Header extends Component {
 
     }
 
+    addNavbar(thisNav){
+        let newNav = thisNav;
+        console.log(newNav);
+        return newNav;
+    }
+
     render() {
         return(
             <div>
-                Hello From inside Header.js
+                <p>Choose a Navbar File</p>
+                <input id="upload" ref="upload" type="file"
+                           onChange={(nav)=> {
+                               this.addNavbar(nav)
+                           }}
+                           onClick={(nav)=> {
+                               nav.target.value = null
+                           }}
+                />
             </div>
         );
     }
