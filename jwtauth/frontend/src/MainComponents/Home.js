@@ -5,7 +5,9 @@ export default class Home extends Component {
         return (
             <div>
                 <p>This is the Homepage </p>
-                <p>This is the P - tag that I want to manipulate.</p>
+                <div>
+                    <p>This is the Content Area that I want to manipulate.</p>
+                </div>
             </div>
         );
     }

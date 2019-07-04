@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 
 import Header from "./Header";
+import Analytics from "./Analytics";
 
 export default class Dashboard extends Component {
     render() {
@@ -12,6 +13,7 @@ export default class Dashboard extends Component {
                         <p>Welcome to Webspot 2.0 Dashboard. </p>
                         <p>A custom CMS made with React, MongoDB, Express JS, and Node.js.</p>
                         <p><strong>I am planning to put analytics here like the original version has.</strong></p>
+                        <Analytics />
                     </Tab>
                     <Tab eventKey="header" title="Header">
                         <p>HEADER TAB</p>
@@ -32,7 +34,10 @@ export default class Dashboard extends Component {
                     </Tab>
                 </Tabs>
 
-
+                {/*These Divs are for Google Analytics in the Dashboard*/}
+                <div id="embed-api-auth-container"></div>
+                <div id="chart-container"></div>
+                <div id="view-selector-container"></div>
 
             </div>
         );
